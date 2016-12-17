@@ -1,0 +1,1 @@
+Get-AppxPackage | % {if (!($_.IsFramework -or $_.PublisherId -eq “cw5n1h2txyewy”)) {$_}} | Select-String -Pattern “Xbox|WildTagent|WindowsStore|Solitaire|Bing|Edge|Twitter|Music|3DBuilder|Skype|Netflix|Zune” -All | Remove-AppXPackage

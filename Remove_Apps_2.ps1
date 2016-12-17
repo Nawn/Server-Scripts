@@ -1,0 +1,1 @@
+Get-AppXProvisionedPackage -Online | % {if ($_.PackageName -match “Xbox|WindowsStore|Solitaire|Bing|WildTagent|Edge|Skype|Twitter|Music|3DBuilder|Netflix|Zune”) {Remove-AppXProvisionedPackage -Online -PackageName $_.PackageName}}
